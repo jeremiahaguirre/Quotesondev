@@ -8,11 +8,14 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-	</header><!-- .entry-header -->
+<i class="fas fa-quote-left"></i>
+<header class="entry-header">
+    <?php the_excerpt(); ?>
 
-	<div class="entry-content">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-## -->
+    </header><i class="fas fa-quote-right"></i><!-- .entry-header -->
+
+    <div class="entry-content">
+
+      <?php the_title(sprintf('<h2 class="entry-title">&#8211; ', esc_url(get_permalink())), '</h2>'); ?>
+    </div><!-- .entry-content -->
+</article><!-- #post-## --> 

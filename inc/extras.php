@@ -40,3 +40,13 @@ add_action( 'wp_before_admin_bar_render', 'qod_admin_bar_render' );
 	remove_meta_box( 'trackbacksdiv', 'post', 'normal' );
 }
 add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
+
+function post( $query ) {
+	if (is_home()||$query->is_main_query() ){
+        // Display 16 posts for a custom post type called 'shop_items'
+		$query->set( 'posts_per_page', 1 );
+		$query->set( 'order', 'ASC' );
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'post', 1 );
