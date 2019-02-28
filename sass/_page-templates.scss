@@ -3,5 +3,18 @@
 --------------------------------------------------------------*/
 
 /* All Archives Page */
+.page-id-210 {
+  .site-content {
+    position: relative;
+    section {
+      margin: 0 70px;
+      a:visited,a:link{
+        color: $color__text-green;
+        text-decoration: none;
+        padding-left:10px;
+      }
+    }
+  }
+}
 
 /* Submit a Quote Page */

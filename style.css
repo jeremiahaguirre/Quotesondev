@@ -668,6 +668,15 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
+.page-id-210 .site-content {
+  position: relative; }
+  .page-id-210 .site-content section {
+    margin: 0 70px; }
+    .page-id-210 .site-content section a:visited, .page-id-210 .site-content section a:link {
+      color: #00cc00;
+      text-decoration: none;
+      padding-left: 10px; }
+
 /* Submit a Quote Page */
 footer {
   margin-left: 620px;
@@ -677,7 +686,7 @@ footer {
     position: relative;
     right: 0; }
     footer nav li {
-      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
       padding-left: 10px;
       padding-right: 10px;
       text-align: center; }
