@@ -32,65 +32,54 @@
   margin: 0 0 $base__space-unit;
 }
 
-.home {
-	i{
-		color: $color__text-green;
-		font-size: 100px;
-	}
-  .site-main {
-    padding-left: 5%;
-    line-height: 2.3em;
-    margin-bottom: 40px;
-    img {
-      width: 60%;
-    }
-    p {
-      font-size: 1.25rem;
-    }
-    h2 {
-      font-size: 1.25rem;
-    }
-    button {
-      background-color: #222;
-      border: 2px solid $color__text-green;
-      border-radius: 5px;
-      color: $color__text-green;
-      font-size: 1rem;
-      padding: 0.8em 1.3em;
-      margin-top: 30px;
-    }
-    @include tablet {
-      img {
-        width: 60%;
-      }
-      p {
-        font-size: 1.6rem;
-      }
-      h2 {
-        font-size: 1.6rem;
-      }
-      button {
-        background-color: #222;
-        border: 2px solid $color__text-green;
-        border-radius: 5px;
-        color: $color__text-green;
-        font-size: 1rem;
-        padding: 0.8em 1.3em;
-        margin-top: 30px;
-      }
+body {
+  #page {
+    max-width: 1080px;
+    width: 70%;
+    margin: 0 auto;
+
+    i {
+      display: none;
     }
     @include desktop {
+      article {
+        position: relative;
+        .fa-quote-left:before {
+          position: absolute;
+          top: 0;
+        }
+        .fa-quote-right:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        i {
+          color: $color__text-green;
+          font-size: 100px;
+          display: block;
+        }
+      }
+      .entry-content {
+        margin: 0 200px;
+      }
+      .site-main {
+        button {
+          left: 290px;
+        }
+      }
+    }
+
+    .site-main {
+      line-height: 2.3em;
+
       img {
         width: 60%;
-        margin-left: 240px;
       }
       p {
-        font-size: 1.6rem;
-        text-align: center;
+        font-size: 1.25rem;
       }
       h2 {
-        font-size: 1.6rem;
-        text-align: center;
+        font-size: 1.25rem;
       }
       button {
         background-color: #222;
@@ -99,8 +88,21 @@
         color: $color__text-green;
         font-size: 1rem;
         padding: 0.8em 1.3em;
-        margin-top: 30px;
-        text-align: center;
+        position: relative;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          border: 2px solid #0d860d;
+        }
+      }
+      .meta {
+        a:link,
+        a:visited {
+          text-decoration: none;
+          color: $color__text-green;
+          font-size: 1.25rem;
+        }
       }
     }
   }
