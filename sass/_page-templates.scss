@@ -4,17 +4,68 @@
 
 /* All Archives Page */
 .page-id-210 {
+  @include desktop {
+    #page {
+      main {
+        position: relative;
+        .fa-quote-left:before {
+          position: absolute;
+          top: 0;
+        }
+        .fa-quote-right:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        i {
+          color: $color__text-green;
+          font-size: 100px;
+          display: block;
+        }
+      }
+    }
+  }
   .site-content {
     position: relative;
     section {
-      margin: 0 70px;
-      a:visited,a:link{
+      margin: 0 120px;
+      a:visited,
+      a:link {
         color: $color__text-green;
         text-decoration: none;
-        padding-left:10px;
+        padding-left: 10px;
+        font-size: 1.25rem;
+      }
+      .categories {
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: 0;
+          padding: 0;
+          li {
+            list-style: none;
+            padding-right: 10px;
+          }
+        }
       }
     }
   }
 }
 
 /* Submit a Quote Page */
+/*Archive page*/
+.archive {
+  #page {
+    main {
+      h1 {
+        margin: 20px 122px;
+      }
+      article {
+        border-top: 1px dashed #fff;
+        border-bottom: 1px dashed #fff;
+        margin:0 100px;
+      }
+    }
+  }
+}
