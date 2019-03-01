@@ -42,7 +42,7 @@ body {
       display: none;
     }
     @include desktop {
-      article {
+      .content-area {
         position: relative;
         .fa-quote-left:before {
           position: absolute;
@@ -71,10 +71,6 @@ body {
 
     .site-main {
       line-height: 2.3em;
-
-      img {
-        width: 60%;
-      }
       p {
         font-size: 1.25rem;
       }
@@ -102,6 +98,34 @@ body {
           text-decoration: none;
           color: $color__text-green;
           font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+#submit {
+  font-size: 1.25rem;
+}
+
+.search,
+.error404 {
+  #page {
+    main {
+      margin: 0 130px;
+      fieldset {
+        border: none;
+      }
+      button {
+        position: absolute;
+        left: 340px;
+        bottom: 26px;
+        border: none;
+        &:hover{
+          border:none;
+        }
+        #search-i {
+          font-size: 20px;
         }
       }
     }
