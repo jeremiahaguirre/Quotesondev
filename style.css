@@ -382,12 +382,13 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
+  display: block;
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border-color: #00cc00;
   border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 0.75rem;
+  background: transparent;
+  color: #00cc00;
+  font-size: 1rem;
   line-height: 1;
   padding: 0.6rem 1rem 0.4rem; }
   button:hover,
@@ -411,16 +412,19 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  color: #FFF;
+  border: 1px solid #00cc00;
+  border-radius: 3px;
+  background: transparent;
+  margin-bottom: 20px; }
   input[type='text']:focus,
   input[type='email']:focus,
   input[type='url']:focus,
   input[type='password']:focus,
   input[type='search']:focus,
   textarea:focus {
-    color: #111; }
+    outline: none;
+    color: #FFF; }
 
 input[type='text'],
 input[type='email'],
@@ -433,16 +437,26 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+label {
+  font-size: 1.25rem;
+  display: block; }
+
+header {
+  margin-top: 30px; }
+  header img {
+    margin: 0 15%;
+    width: 70%; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #00cc00; }
   a:visited {
-    color: purple; }
+    color: #00cc00; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #166816; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -451,8 +465,6 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
-  float: left;
   width: 100%; }
   .main-navigation ul {
     list-style: none;
@@ -481,7 +493,7 @@ a {
     float: left;
     position: relative; }
   .main-navigation a {
-    display: block;
+    display: inline-block;
     text-decoration: none; }
 
 /* Small menu. */
@@ -604,16 +616,16 @@ body #page {
   body #page i {
     display: none; }
   @media (min-width: 1080px) {
-    body #page article {
+    body #page .content-area {
       position: relative; }
-      body #page article .fa-quote-left:before {
+      body #page .content-area .fa-quote-left:before {
         position: absolute;
         top: 0; }
-      body #page article .fa-quote-right:before {
+      body #page .content-area .fa-quote-right:before {
         position: absolute;
         top: 0;
         right: 0; }
-      body #page article i {
+      body #page .content-area i {
         color: #00cc00;
         font-size: 100px;
         display: block; }
@@ -623,8 +635,6 @@ body #page {
       left: 290px; } }
   body #page .site-main {
     line-height: 2.3em; }
-    body #page .site-main img {
-      width: 60%; }
     body #page .site-main p {
       font-size: 1.25rem; }
     body #page .site-main h2 {
@@ -647,6 +657,28 @@ body #page {
       color: #00cc00;
       font-size: 1.25rem; }
 
+#submit {
+  font-size: 1.25rem; }
+
+.search #page main,
+.error404 #page main {
+  margin: 0 130px; }
+  .search #page main fieldset,
+  .error404 #page main fieldset {
+    border: none; }
+  .search #page main button,
+  .error404 #page main button {
+    position: absolute;
+    left: 340px;
+    bottom: 26px;
+    border: none; }
+    .search #page main button:hover,
+    .error404 #page main button:hover {
+      border: none; }
+    .search #page main button #search-i,
+    .error404 #page main button #search-i {
+      font-size: 20px; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -668,27 +700,83 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
+@media (min-width: 1080px) {
+  .page-id-210 #page main {
+    position: relative; }
+    .page-id-210 #page main .fa-quote-left:before {
+      position: absolute;
+      top: 0; }
+    .page-id-210 #page main .fa-quote-right:before {
+      position: absolute;
+      top: 0;
+      right: 0; }
+    .page-id-210 #page main i {
+      color: #00cc00;
+      font-size: 100px;
+      display: block; } }
+
 .page-id-210 .site-content {
   position: relative; }
   .page-id-210 .site-content section {
-    margin: 0 70px; }
-    .page-id-210 .site-content section a:visited, .page-id-210 .site-content section a:link {
+    margin: 0 120px; }
+    .page-id-210 .site-content section a:visited,
+    .page-id-210 .site-content section a:link {
       color: #00cc00;
       text-decoration: none;
-      padding-left: 10px; }
+      padding-left: 10px;
+      font-size: 1.25rem; }
+    .page-id-210 .site-content section .categories ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      margin: 0;
+      padding: 0; }
+      .page-id-210 .site-content section .categories ul li {
+        list-style: none;
+        padding-right: 10px; }
 
 /* Submit a Quote Page */
+.page-id-212 #page main {
+  margin: 0 130px; }
+
+/*Archive page*/
+.archive #page main h1 {
+  margin: 20px 122px; }
+
+.archive #page main article {
+  border-top: 1px dashed #fff;
+  border-bottom: 1px dashed #fff;
+  margin: 0 200px; }
+  .archive #page main article .entry-content {
+    margin: 0; }
+
 footer {
-  margin-left: 620px;
-  margin-top: 10rem;
-  width: 100%; }
+  width: 100%;
+  margin-top: 90px;
+  margin-bottom: 10px; }
   footer nav {
-    position: relative;
-    right: 0; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    footer nav p {
+      padding: 0;
+      margin: 0; }
     footer nav li {
       border-right: 1px solid #fff;
-      padding-left: 10px;
       padding-right: 10px;
+      margin-right: 10px;
       text-align: center; }
     footer nav a {
       color: #00cc00; }

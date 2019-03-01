@@ -54,6 +54,13 @@
 }
 
 /* Submit a Quote Page */
+.page-id-212{
+  #page{
+    main{
+      margin:0 130px;
+    }
+  }
+}
 /*Archive page*/
 .archive {
   #page {
@@ -64,7 +71,10 @@
       article {
         border-top: 1px dashed #fff;
         border-bottom: 1px dashed #fff;
-        margin:0 100px;
+        margin:0 200px;
+        .entry-content{
+          margin:0;
+        }
       }
     }
   }

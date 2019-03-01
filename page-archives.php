@@ -8,7 +8,9 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
+
     <main id="main" class="site-main" role="main">
+        <i class="fas fa-quote-left"></i>
         <section class="archives-main">
             <?php while (have_posts()): the_post(); ?>
             <?php get_template_part('template-parts/content', 'page'); ?>
@@ -29,10 +31,12 @@ get_header(); ?>
             </div>
             <div class="categories">
                 <h2>Categories</h2>
-                <?php  wp_list_categories(array(
-                    'title_li' => ''
-                )); ?>
-               
+                <ul>
+                    <?php wp_list_categories(array(
+                        'title_li' => ''
+                    )); ?>
+                </ul>
+
             </div>
             <div class="tags">
                 <h2>Tags</h2>
@@ -47,7 +51,7 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
             <?php endwhile; ?>
-        </section>
+        </section><i class="fas fa-quote-right"></i>
     </main><!-- #main -->
 </div><!-- #primary -->
 <?php get_footer(); ?> 

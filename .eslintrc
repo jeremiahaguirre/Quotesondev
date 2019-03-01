@@ -19,6 +19,7 @@
     "jQuery": false,
     "$": false,
     "_": false
+
   },
   "env": {
     "es6": true,

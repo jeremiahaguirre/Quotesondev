@@ -8,7 +8,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<i class="fas fa-quote-left"></i>
+
     <div class="entry-content">
         
         <header class="entry-header">
@@ -19,5 +19,5 @@
             <span class="source"></span>
         </div>
         
-    </div><i class="fas fa-quote-right"></i><!-- .entry-content -->
+    </div><!-- .entry-content -->
 </article><!-- #post-## --> 
