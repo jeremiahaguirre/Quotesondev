@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<i class="fas fa-quote-left"></i><main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
+		</main><i class="fas fa-quote-right"></i><!-- #main -->
 	</section><!-- #primary -->
 
 <?php get_footer(); ?>
