@@ -29,7 +29,7 @@
                         <?php bloginfo('name'); ?></a></h1>
             </div><!-- .site-branding -->
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/qod-logo.svg" alt="site logo"></div>
+                <a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/qod-logo.svg" alt="site logo"></a></div>
         </header><!-- #masthead -->
 
         <div id="content" class="site-content"> 
