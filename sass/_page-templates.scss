@@ -27,8 +27,12 @@
   }
   .site-content {
     position: relative;
+
     section {
-      margin: 0 120px;
+      @include desktop {
+        margin: 0 120px;
+      }
+
       a:visited,
       a:link {
         color: $color__text-green;
@@ -54,10 +58,12 @@
 }
 
 /* Submit a Quote Page */
-.page-id-212{
-  #page{
-    main{
-      margin:0 130px;
+.page-id-212 {
+  #page {
+    @include desktop {
+      main {
+        margin: 0 130px;
+      }
     }
   }
 }
@@ -71,10 +77,25 @@
       article {
         border-top: 1px dashed #fff;
         border-bottom: 1px dashed #fff;
-        margin:0 200px;
-        .entry-content{
-          margin:0;
+        @include desktop {
+          margin: 0 200px;
         }
+        .entry-content {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.page-id-207 {
+  #page {
+    main {
+      @include desktop {
+        margin: 0 150px;
+      }
+      .entry-content {
+        margin: 0;
       }
     }
   }
