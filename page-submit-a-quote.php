@@ -24,7 +24,8 @@ get_header(); ?>
 		</form>
 </div>
         <?php else: ?>
-
+            <p>Sorry, you must be logged in to submit a quote!</p>
+            <a href="<?php echo wp_login_url() ?>">Click here to login.</a>
         <?php endif; ?>
     </main><i class="fas fa-quote-right"></i><!-- #main -->
 </div><!-- #primary -->
